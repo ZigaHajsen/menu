@@ -8,7 +8,7 @@ const allCategories = ['all', ...new Set(items.map((item) => item.category))];
 
 const App: React.FC = () => {
   const [menuItems, setMenuItems] = useState<ItemsModel[]>(items);
-  const [categories, setCategories] = useState(allCategories);
+  const [categories] = useState(allCategories);
 
   const filterItems = (category: string) => {
     if (category === 'all') {
