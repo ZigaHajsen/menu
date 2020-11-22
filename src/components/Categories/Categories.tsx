@@ -1,7 +1,12 @@
 import React from 'react';
 import { ButtonContainer, FilterButton } from './CategoriesStyle';
 
-const Categories: React.FC<any> = ({ categories, filterItems }) => {
+interface CategoriesProps {
+  categories: string[];
+  filterItems: Function;
+}
+
+const Categories: React.FC<CategoriesProps> = ({ categories, filterItems }) => {
   return (
     <ButtonContainer>
       {categories.map((category: string, index: number) => {
